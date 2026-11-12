@@ -1,0 +1,16 @@
+
+name: Validação do Projeto
+
+on:
+  push:
+jobs:
+  validacao:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+      - name: Exibir informações
+        run: 'echo "Repositório: ${{ github.repository }}"; echo "Usuário: ${{ github.actor }}"'
+      - name: Validação concluída
+        run: echo "Validação do projeto concluída com sucesso!"
