@@ -14,3 +14,5 @@ jobs:
         run: 'echo "Repositório: ${{ github.repository }}"; echo "Usuário: ${{ github.actor }}"'
       - name: Validação concluída
         run: echo "Validação do projeto concluída com sucesso!"
+      - name: Verificar README
+        run: '[ -f README.md ] && echo "README encontrado!" || (echo "README não encontrado!" && exit 1)'
